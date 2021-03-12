@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "this is a new post",
+      "body": "hello every one , we are on live,,,,testing new blog of react that runs json-server"
+    },
+    {
+      "title": "this is second post ",
+      "body": "hello everyone ,God Bless you ",
+      "id": 2
+    }
+  ]
+}
