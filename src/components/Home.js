@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Root.css'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
 
@@ -27,10 +28,13 @@ class Home extends Component {
         return (
           <div className="post card center" key={post.id}>
             <div className="card-content">
-            <h6 className="card-title">{post.title}</h6>
-            <p>{post.body}</p>
+              <Link to={'/' + post.id}>
+                <h6 className="card-title">{post.title}</h6>
+              </Link>
+              <p>{post.body}</p>
             </div>
           </div>
+
         )
       })
     ) : (

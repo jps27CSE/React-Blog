@@ -11,23 +11,23 @@ class Post extends Component {
 
     onSubmitHandler = (event) => {
         event.preventDefault()
-         console.log(this.state)
-         axios.post("http://localhost:3001/data",this.state)
-         .then(respone=>{
-              console.log("Posted Successfully")
-         })
-         
+        console.log(this.state)
+        axios.post("http://localhost:3001/data", this.state)
+            .then(respone => {
+                console.log("Posted Successfully")
+            })
+        this.props.history.push('/')
     }
 
     EventHandler = (event) => {
-         this.setState({[event.target.name]: event.target.value })
+        this.setState({ [event.target.name]: event.target.value })
 
-    } 
+    }
 
 
     render() {
 
-        const {title,body} = this.state
+        const { title, body } = this.state
 
         return (
             <div className="center">
