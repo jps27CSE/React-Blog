@@ -18,6 +18,19 @@ class FullPost extends Component {
                 })
             })
     }
+    DeletePost = (e) => {
+        const id = this.props.match.params.full_post;
+        const url = `http://localhost:3001/data/`;
+        e.preventDefault();
+        axios.delete(url + id)
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+        this.props.history.push('/')
+    }
 
     render() {
 
@@ -28,6 +41,8 @@ class FullPost extends Component {
             <div className="center">
                 <h4>{post.title}</h4>
                 <span>{post.body}</span>
+                <br />
+                <button className="btn grey" onClick={this.DeletePost}>Delete Post</button>
             </div>
 
 

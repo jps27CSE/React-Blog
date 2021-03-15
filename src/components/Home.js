@@ -38,7 +38,9 @@ class Home extends Component {
         )
       })
     ) : (
-      <div className="loader"></div>
+      <div className="loader">
+        <h6>No Post</h6>
+      </div>
     )
 
 
